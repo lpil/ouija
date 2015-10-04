@@ -15,9 +15,12 @@ defmodule Ouija.PeriodicWorkerTest do
     {:ok, pid} = PeriodicWorker.start_link( &inc/1, 0, 10 )
     refute_receive _, 9
     assert_receive 1, 2
-    assert_receive 2, 11
-    assert_receive 3, 11
-    assert_receive 4, 11
+    refute_receive _, 9
+    assert_receive 2, 2
+    refute_receive _, 9
+    assert_receive 3, 2
+    refute_receive _, 9
+    assert_receive 4, 2
     PeriodicWorker.stop( pid )
   end
 
