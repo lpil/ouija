@@ -1,4 +1,10 @@
 defmodule Ouija.ErrorView do
+  @moduledoc """
+  Template functions for application failure reporting views.
+
+  Clearly never used.
+  """
+
   use Ouija.Web, :view
 
   def render("404.html", _assigns) do

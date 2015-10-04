@@ -1,4 +1,8 @@
 defmodule Ouija.Endpoint do
+  @moduledoc """
+  HTTP entrypoint
+  """
+
   use Phoenix.Endpoint, otp_app: :ouija
 
   socket "/socket", Ouija.UserSocket

@@ -1,4 +1,6 @@
 defmodule Ouija.Router do
+  @moduledoc "Turning routes into actions"
+
   use Ouija.Web, :router
 
   pipeline :browser do

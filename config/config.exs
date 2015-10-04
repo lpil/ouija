@@ -9,7 +9,8 @@ use Mix.Config
 config :ouija, Ouija.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "UzAFAAHne+AqWc0glmf0ri0nOBUcBZmK9Pf70sJ2LFArFshOZ6jkuBqEwWXc0R7Z",
+  secret_key_base:
+    "UzAFAAHne+AqWc0glmf0ri0nOBUcBZmK9Pf70sJ2LFArFshOZ6jkuBqEwWXc0R7Z",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: Ouija.PubSub,
            adapter: Phoenix.PubSub.PG2]

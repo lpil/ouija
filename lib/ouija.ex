@@ -1,4 +1,8 @@
 defmodule Ouija do
+  @moduledoc """
+  All knowing boards.
+  """
+
   use Application
 
   # See http://elixir-lang.org/docs/stable/elixir/Application.html
