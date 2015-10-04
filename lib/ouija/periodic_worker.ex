@@ -13,7 +13,7 @@ defmodule Ouija.PeriodicWorker do
             state:    nil,
             interval: 10_000
 
-  alias Ouija.PeriodicWorker, as: PW
+  alias __MODULE__, as: PW
 
   @type work_fn :: (any -> any)
 
