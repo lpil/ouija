@@ -24,6 +24,7 @@ defmodule Ouija.Mixfile do
         :phoenix_html,
         :cowboy,
         :logger,
+        :httpoison,
         # :phoenix_ecto,
         # :postgrex,
       ]
@@ -40,6 +41,9 @@ defmodule Ouija.Mixfile do
       # Web server
       {:cowboy, "~> 1.0"},
 
+      # HTTP client
+      {:httpoison, "~> 0.7"},
+
       # # DSL for querying DB
       # {:phoenix_ecto, "~> 1.1"},
       # # DB connector
@@ -52,6 +56,8 @@ defmodule Ouija.Mixfile do
 
       # Descriptive test case macros
       {:ex_spec, "~> 0.3", only: :test},
+      # Mocking tool. Really really avoid using this.
+      {:meck, "~> 0.8", only: :test},
 
       # Code linter
       {:dogma, only: ~w(dev test)a},
