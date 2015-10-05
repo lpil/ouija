@@ -43,6 +43,8 @@ defmodule Ouija.Mixfile do
 
       # HTTP client
       {:httpoison, "~> 0.7"},
+      # JSON encoder/decoder
+      {:poison, "~> 1.5"},
 
       # # DSL for querying DB
       # {:phoenix_ecto, "~> 1.1"},

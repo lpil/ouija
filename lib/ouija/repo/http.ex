@@ -5,13 +5,16 @@ defmodule Ouija.Repo.HTTP do
 
   defstruct method:  :get,
             url:     nil,
-            body:    nil,
+            body:    "",
             headers: [],
             options: []
 
   @type http_request  :: %__MODULE__{}
   @type http_response :: HTTPoison.Response.t | HTTPoison.AsyncResponse.t
   @type http_error    :: HTTPoison.Error.t
+  @type http_result   :: http_request | http_error
+
+  @type t :: (http_response -> http_response)
 
   @spec exec(http_request) :: {:ok, http_response} | {:error, http_error}
   @doc """
