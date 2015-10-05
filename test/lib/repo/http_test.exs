@@ -18,8 +18,10 @@ defmodule Ouija.Repo.HTTPTest do
       assert body    == request.body
       assert headers == request.headers
       assert opts    == request.options
+      :http_response
     end)
-    HTTP.exec( request )
+    result = HTTP.exec( request )
+    assert :http_response == result
     :meck.validate( HTTPoison )
     :meck.unload( HTTPoison )
   end
