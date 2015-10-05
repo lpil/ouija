@@ -7,6 +7,8 @@ All knowing boards.
 
 ## Setup
 
+Make `config/dev.secret.exs`. See `config/dev.secret.exs.example`
+
 ```sh
 # Install Elixir deps
 mix deps.get
